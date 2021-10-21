@@ -1,1 +1,0 @@
-pyinstaller -i icon.ico --version-file 1.1 main.py
