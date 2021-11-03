@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">HIGHSHELL (also hSH or HS)</h1>
+  <h1 align="center">GreenShell (also GSH or GS)</h1>
 </p>
 <p align="center">
   <h2 align="center">Just a shell writed on Python</h2>
