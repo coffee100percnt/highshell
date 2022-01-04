@@ -5,17 +5,17 @@
   <h2 align="center">Just a shell writed on Python</h2>
 </p>
 <p align="center">
-  <a href="https://github.com/Mirk337/HIGHSHELL/issues">Send bug report</a>
+  <a href="https://github.com/coffee100percnt/HIGHSHELL/issues">Send bug report</a>
   •
-  <a href="https://github.com/Mirk337/HIGHSHELL/#how-to-use-the-shell">How to use the shell</a>
+  <a href="https://github.com/coffee100percnt/HIGHSHELL/#how-to-use-the-shell">How to use the shell</a>
   •
-  <a href="https://github.com/Mirk337/HIGHSHELL#something-is-broken-right-now">Broked features</a>
+  <a href="https://github.com/coffee100percnt/HIGHSHELL#something-is-broken-right-now">Broked features</a>
   •
-  <a href="https://github.com/Mirk337/HIGHSHELL#licenses">Licenses</a>
+  <a href="https://github.com/coffee100percnt/HIGHSHELL#licenses">Licenses</a>
 </p>
 
 ## How to use the shell
-### Install all needed librares
+### Install requirements
 ### Linux or macOS
 ```bash
 pip3 install -r requirements.txt
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## How to create an executable file for Windows
+## How to create an executable
 ### Linux or macOS
 ```bash
 pip3 install pyinstaller
@@ -46,4 +46,4 @@ Note for Windows users: also you can use official installer from release page.
 Nothing is broken
 
 ### Licenses
-The project is licensed under the GNU GPL 3.0.
+The project is licensed under the GNU Lesser General Public License 2.1.
