@@ -32,7 +32,6 @@ pip3 install pyinstaller
 pyinstaller -i icon.ico main.py
 ```
 ### Something is broken right now
-cd command is broken 
-
+nothing is broken
 ### Licenses
 The project is licensed under the GNU Lesser General Public License 2.1.
