@@ -15,23 +15,18 @@
 </p>
 
 ## How to use the shell
-### Install requirements
-### Linux or macOS
-```bash
-pip3 install -r requirements.txt
-```
 ### Launch shell
 ```
 python main.py
 ```
 
-## How to create an executable
+## How to compile
 ### Linux or macOS
 ```bash
 pip3 install pyinstaller
 pyinstaller main.py
 ```
-### Something is broken right now
+## Something is broken right now
 nothing is broken
-### Licenses
+## License
 The project is licensed under the GNU Lesser General Public License 2.1.
