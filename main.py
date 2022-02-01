@@ -3,8 +3,7 @@ import subprocess
 
 version = "0.1-alpha"
 cd = os.path.expanduser('~')
-#url_download = "http://cdn.discordapp.com/attachments/900323860904292382/900323946702974986/main.exe"
-print("HIGH SHELL", version, "By coffee100percnt\n")
+print("HISHELL", version, "By coffee100percnt\n")
 def visualcd(dir):
     if dir.startswith(os.path.expanduser("~")):
         idk = cd.split(os.path.expanduser("~"))
