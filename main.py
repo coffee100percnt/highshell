@@ -7,7 +7,7 @@ print("HISHELL", version, "By coffee100percnt\n")
 def visualcd(dir):
     if dir.startswith(os.path.expanduser("~")):
         idk = cd.split(os.path.expanduser("~"))
-        idk2 = "~" + idk[0]
+        idk2 = "~" + idk[1]
         return idk2
 
 while True:
@@ -25,9 +25,8 @@ while True:
         HONAK0 (github)"""
     elif inp[0] == "cd":
         if len(inp) > 1:
-            cd += inp[1]
+            cd += f'/{inp[1]}'
+        else:
+            cd = os.path.expanduser("~")
     else:
-        try:
-            subprocess.call(f'/bin/{inp[0]}')
-        except:
-            subprocess.call(inp[0])
+        subprocess.run(inp)
