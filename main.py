@@ -1,6 +1,4 @@
 import os
-import wget
-import shutil
 import subprocess
 
 version = "0.1-alpha"
@@ -26,49 +24,11 @@ while True:
         coffee100percnt (github)
         Contributors:
         HONAK0 (github)"""
-    #File System
-    elif inp[0] == "mkdir":
-        if len(inp) > 1:
-            os.mkdir(cd + inp[1])
-    elif inp[0] == "rmdir":
-        if len(inp) > 1:
-            os.rmdir(cd + inp[1])
-    elif inp[0] == "mkfile":
-        if len(inp) > 1:
-            fl = open(cd + inp[1], "w")
-            fl.write("")
-            fl.close()
-    elif inp[0] == "rm":
-        if len(inp) > 1:
-            os.remove(cd + inp[1])
     elif inp[0] == "cd":
         if len(inp) > 1:
-            cd = inp[1]
-    elif inp[0] == "ls":
-        if len(inp) > 1:
-            for cont in os.listdir(cd + "/" + inp[1]):
-                if cont.startswith('.'):
-                    pass
-                else:
-                    print(cont)
-        else:
-            for cont in os.listdir(cd + inp[1]):
-                if cont.startswith('.'):
-                    pass
-                else:
-                    print(cont)
-    elif inp[0] == "rename":
-        if len(inp) > 2:
-                os.rename(cd + inp[1], cd + inp[2])
-    elif inp[0] == "download":
-        if len(inp) > 2:
-            wget.download(inp[1], cd + inp[2])
-            print()
-    elif inp[0] == "copy":
-        if len(inp) > 2:
-            shutil.copyfile(cd + inp[1], cd + inp[2])
-    elif inp[0] == "tty":
-        print(os.ctermid())
+            cd += inp[1]
     else:
-        cmd = "/bin/" + inp[0]
-        process = subprocess.call(cmd)
+        try:
+            subprocess.call(f'/bin/{inp[0]}')
+        except:
+            subprocess.call(inp[0])
