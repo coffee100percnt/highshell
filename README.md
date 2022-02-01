@@ -29,7 +29,7 @@ python main.py
 ### Linux or macOS
 ```bash
 pip3 install pyinstaller
-pyinstaller -i icon.ico main.py
+pyinstaller main.py
 ```
 ### Something is broken right now
 nothing is broken
