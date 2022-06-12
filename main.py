@@ -1,45 +1,62 @@
 import os
 import subprocess
 
-version = "0.2-beta"
+VERSION = "0.3b"
 cd = os.path.expanduser('~')
 os.chdir(cd)
-print("HISHELL", version, "By coffee100percnt\n")
+print("HISHELL", VERSION, "By coffee100percnt\n")
 def visualcd(dir):
     if dir.startswith(os.path.expanduser("~")):
         idk = cd.split(os.path.expanduser("~"))
         idk2 = "~" + idk[1]
         return idk2
+    else:
+        return dir
 def parse(inp, dir):
     if inp == None:
         print()
     elif inp[0] == "help":
-            print("help\nversion\ncredits\nexit\nmkdir <file>\nrmdir <file>\nmkfile <file>\nrmfile <file>\ncd <path>\nlist\nrename <file> <new name>\nstartf <file>\ndownload <http url> <file name>\ncopy <file> <new name>")
+        print("help\nversion\ncredits\nexit\ncd <dir>")
     elif inp[0] == "version":
-        print("HISHELL", version)
+        print("HISHELL", VERSION)
     elif inp[0] == "exit":
         exit()
     elif inp[0] == "credits":
-        print("""Maintainer:
-        coffee100percnt (github)
+        print("""       Maintainer:
+            coffee100percnt (github)
         Contributors:
-        HONAK0 (github)""")
+            HONAK0 (github)
+            OctoBanon-Main (github)""")
     elif inp[0] == "cd":
-        if len(inp) > 1:
-            dir += f'/{inp[1]}'
-            os.chdir(dir)
-        else:
-            dir = os.path.expanduser("~")
+        try:
+            if len(inp) > 1:
+                if inp[1][0:1] != "/":
+                    dir += f'/{inp[1]}'
+                    return(dir)
+                elif inp[1][0:1] == "/":
+                    dir = inp[1]
+                    return(dir)
+            else:
+                dir = os.path.expanduser("~")
+                return(dir)
+        except FileNotFoundError:
+            print('No such directory')
     else:
         subprocess.run(inp)
 
 while True:
     try:
         inp = input("HS "+ visualcd(cd) +" $ ").split(" ")
-        parse(inp, cd)
+        try:
+            moo = parse(inp, cd)
+            os.chdir(moo)
+            cd = moo
+        except:
+            pass
     except EOFError:
         print("\nexit")
         exit()
     except KeyboardInterrupt:
         inp = None
         parse(inp, cd)
+        
