@@ -9,8 +9,6 @@
   •
   <a href="https://github.com/coffee100percnt/HIGHSHELL/#how-to-use-the-shell">How to use the shell</a>
   •
-  <a href="https://github.com/coffee100percnt/HIGHSHELL#something-is-broken-right-now">Broked features</a>
-  •
   <a href="https://github.com/coffee100percnt/HIGHSHELL#licenses">Licenses</a>
 </p>
 
@@ -26,7 +24,5 @@ python main.py
 pip3 install pyinstaller
 pyinstaller main.py
 ```
-## Something is broken right now
-nothing is broken
 ## License
 The project is licensed under the GNU Lesser General Public License 2.1.
