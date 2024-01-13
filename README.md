@@ -9,7 +9,7 @@
   •
   <a href="https://github.com/coffee100percnt/HIGHSHELL/#how-to-use-the-shell">How to use the shell</a>
   •
-  <a href="https://github.com/coffee100percnt/HIGHSHELL#licenses">Licenses</a>
+  <a href="https://github.com/coffee100percnt/HIGHSHELL#licenses">License</a>
 </p>
 
 ## How to use the shell
