@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-VERSION = "0.3b"
+VERSION = "1.0b1"
 cd = os.path.expanduser('~')
 os.chdir(cd)
 print("HISHELL", VERSION, "By coffee100percnt\n")
